@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URGENT: Scientists uncover a natural cure for Memory Loss</title>
+    <meta name="description" content="Over 15,000 Americans have already reversed Alzheimer's for less than $45 with this natural home remedy">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+
+            line-height: 1.6;
+            background-color: white;
+            /* max-width: 800px; */
+            margin: 0 auto;
+            /* padding: 0 15px; */
+        }
+        
+
+     .header-bar {
+    width: 100vw;
+    background: linear-gradient(to right, #8b0000, #cc0000);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #f2f2f2;
+    padding: 10px 100px;
+    font-size: 16px;
+    position: relative;
+}
+
+.left, .center, .right {
+    flex: 1;
+}
+
+.left {
+    text-align: left;
+    color: white;
+}
+
+.center {
+    text-align: center;
+    margin: 0;
+    color:white;
+}
+
+.right {
+    text-align: right;
+    position: relative;
+    color: white;
+}
+
+.right i {
+    font-size: 22px; /* bigger icon */
+    cursor: pointer;
+}
+
+#search-bar {
+    display: none;
+    position: absolute;
+    right: 35px;
+    top: 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+
+        .container{
+             max-width: 800px; 
+            margin: 0 auto;
+
+
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            color: #222;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 30px;
+            color:black;
+            line-height: 1.3;
+        }
+        h1 strong {
+             color: #a00;
+    }        
+        h2 {
+            font-size: 20px;
+            margin-top: 25px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        a {
+            color: #15c;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Header */
+        .read-time {
+            color: #666;
+            font-size: 14px;
+            margin: 15px 0;
+            padding: 0 12px;
+            border-left:4px solid  #a00;
+        }
+        .read-time p {
+            margin-left: 12px;
+        }
+        
+        .author-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding: 0 12px;
+            border-left:4px solid  #a00;
+            
+        }
+
+
+        /* Video wrapper (mobile portrait style) */
+.video-wrapper {
+    position: relative;
+    width: 300px;      /* narrower like mobile */
+    height: 500px;     /* taller */
+    margin: 0 auto 16px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* fill container */
+}
+
+
+.logos {
+    display: flex;
+    flex-direction: column; /* stack rows vertically */
+    align-items: center;    /* center horizontally */
+    gap: 12px;              /* space between rows */
+    margin: 8px 0 16px;
+}
+
+.logo-row {
+    display: flex;
+    justify-content: center; /* center logos in the row */
+    gap: 12px;               /* space between logos */
+}
+
+.logos img {
+    height: 32px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+       
+        
+        /* Comments */
+        .comments-count {
+            font-size: 14px;
+            color: #666;
+            margin: 25px 0 15px;
+        }
+        
+        .comment {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #777;
+        }
+        
+        .comment-author {
+            font-weight: bold;
+        }
+        
+        .comment-time {
+            font-size: 12px;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        .comment-actions {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        /* Product Section (initially hidden) */
+      .product-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;            /* thoda zyada gap for balance */
+    max-width: 600px;     /* same as video-wrapper */
+    margin: 0 auto;
+}
+
+.product-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 300px;   /* thoda bada */
+    height: auto;
+    max-height: 700px;  /* thoda zyada height allow */
+    object-fit: contain;
+    border-radius: 12px;
+    background: #fff;
+    padding: 6px;
+}
+
+.product-image p {
+    margin-top: 10px;
+    font-size: 15px;   /* thoda readable */
+    color: #222;
+    font-weight: 500;
+}
+
+    /* Footer */
+        footer {
+            background: #000;
+            width: 100vw;
+            height: 77px;
+            margin-top: 26px;
+            color: #fffdfd;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+/* 
+/* Video Custom Controls */
+/* .video-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10; */
+/* } */ 
+
+/* .video-controls button {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.video-controls button:hover {
+  background: rgba(0,0,0,0.85);
+} */
+    
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+            
+            .product-images {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+    .video-wrapper video {
+        max-height: none;
+        border-radius: 8px;
+    }
+    .logos i {
+        font-size: 28px;
+    }
+}
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .header-bar {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .video-wrapper {
+    width: 90%;
+    height: auto;
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .product-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .comment-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+    </style>
+</head>
+<body>
+<div class="header-bar">
+    <div class="left">
+        <i class="fas fa-bars"></i> <!-- hamburger icon -->
+    </div>
+    <h2 class="center">Health</h2>
+    <div class="right">
+        <i class="fas fa-search" id="search-icon"></i>
+        <input type="text" id="search-bar" placeholder="Search..." />
+    </div>
+</div>
+
+    </div>
+    <div class="container">
+    <p class="read-time">4 MIN READ</p>
+    
+    <h1><strong>URGENT:</strong> Scientists uncover a natural cure for Memory Loss that can be made at home</h1>
+    
+    <p class="author-date">Over 15,000 Americans have already reversed Alzheimer's for less than $45 <br> <h4> By Dr. Sunjay Gupta</h4> 09/12/2025</p>
+   
+
+    <div class="video-wrapper">
+    <video src="assets/video.mp4" autoplay muted playsinline controls></video>
+</div>
+<!-- <div class="video-wrapper">
+  <video id="myVideo" src="assets/video.mp4" autoplay muted playsinline></video> -->
+
+  <!-- Custom Controls -->
+  <!-- <div class="video-controls">
+    <video src="assets/video.mp4" autoplay muted playsinline controls></video>
+    <button id="playPause"><i class="fas fa-play"></i></button>
+    <button id="muteUnmute"><i class="fas fa-volume-mute"></i></button>
+    <button id="fullscreen"><i class="fas fa-expand"></i></button>
+  </div>
+</div> -->
+
+
+<!-- Logos strip below video -->
+<div class="logos">
+    <div class="logo-row">
+        <img src="assets/images/logo-cbs.jpg" alt="CNN">
+        <img src="assets/images/logo-fox.jpg" alt="Fox News">
+        <img src="assets/images/logo-msnbc.jpg" alt="MSNBC">
+        <img src="assets/images/logo-abc.jpg" alt="ABC">
+        <img src="assets/images/logo-times.jpg" alt="NBC">
+    </div>
+    <div class="logo-row">
+        <img src="assets/images/logo-cnn.jpg" alt="CNN">
+        <img src="assets/images/logo-nbc.jpg" alt="Fox News">
+        <img src="assets/images/logo-fox-news.jpg" alt="MSNBC">
+        <img src="assets/images/logo-post.jpg" alt="post">
+        
+    </div>
+</div>
+
+
+        
+<div id="productSection" class="product-section">
+    <div class="product-images">
+        <div class="product-image">
+            <img src="assets/images/bottle 1.webp" alt="1 Month Supply">
+            <p>1 Month Supply</p>
+        </div>
+        <div class="product-image">
+            <img src="assets/images/bottle2.webp" alt="3 Month Supply">
+            <p>3 Month Supply</p>
+        </div>
+        <div class="product-image">
+            <img src="assets/images/bottle3.webp" alt="6 Month Supply">
+            <p>6 Month Supply</p>
+        </div>
+    </div>
+</div>
+
+   
+
+
+
+    
+        <a href="#" class="audio-btn">GET THE RECIPE NOW</a>
+    
+    <p class="comments-count">Showing 16 of 552 comments</p>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">L</div>
+            <div>
+                <span class="comment-author">Linda Carter</span>
+                <span class="comment-time">1:3 m</span>
+            </div>
+        </div>
+        <p>So glad I stayed until the end. I'm incredibly happy!!! Thank you, Dr. Sunjay Gupta. As I got older, I started forgetting birthdays, where I put things… I thought to end up alone in a nursing home. But after trying this recipe, my memory came back like I was 20 again! God bless you!</p>
+        <div class="comment-actions">Like - Reply</div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">R</div>
+            <div>
+                <span class="comment-author">Rachel Simmons</span>
+                <span class="comment-time">1:1 m</span>
+            </div>
+        </div>
+        <p>I was skeptical at first, but after giving it a shot, I saw it actually works. I even remembered my bank password. Dr. Gupta, you're amazing!!</p>
+        <div class="comment-actions">Like - Reply</div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">T</div>
+            <div>
+                <span class="comment-author">Tom Jennings</span>
+                <span class="comment-time">18:13 m</span>
+            </div>
+        </div>
+        <p>My mom's had Alzheimer's for over five years. This honey trick helped her bounce back like I've never seen before. Thank you, God!!</p>
+        <div class="comment-actions">Like - Reply</div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">M</div>
+            <div>
+                <span class="comment-author">Mark Phillips</span>
+                <span class="comment-time">3:16 h</span>
+            </div>
+        </div>
+        <p>Thank you so much, Dr. Gupta, for turning my life around in just a few weeks. It honestly feels like a miracle. I tear up just thinking about how well it worked.</p>
+        <div class="comment-actions">Like - Reply</div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">D</div>
+            <div>
+                <span class="comment-author">Debra Mitchell</span>
+                <span class="comment-time">5:26 m</span>
+            </div>
+        </div>
+        <p>I always thought this memory and Alzheimer's stuff was just hype, but I had to eat my words. If I had known about this earlier, I would've tried it years ago!!</p>
+        <div class="comment-actions">Like - Reply</div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">S</div>
+            <div>
+                <span class="comment-author">Susan Blake</span>
+                <span class="comment-time">9:47 m</span>
+            </div>
+        </div>
+        <p>Thought it was a scam at first, but it seriously made my mind feel so much sharper! Unbelievable — thank you, Jessie!!!</p>
+        <div class="comment-actions">Like - Reply</div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">G</div>
+            <div>
+                <span class="comment-author">Greg Thompson</span>
+                <span class="comment-time">10:11 h</span>
+            </div>
+        </div>
+        <p>I tried this honey method everyone's talking about — and it's helping my mom a lot! I'm telling all my friends about it now.</p>
+        <div class="comment-actions">Like - Reply</div>
+    </div>
+    
+    <p style="font-size: 14px; color: #666; margin: 20px 0;">This post is no longer receiving comments!</p>
+    </div>
+    <footer>
+        All Rights Reserved © 2025
+    </footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
