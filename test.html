@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URGENT: Scientists uncover a natural cure for Memory Loss</title>
+    <meta name="description" content="Over 15,000 Americans have already reversed Alzheimer's for less than $45 with this natural home remedy">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: Arial, Helvetica, sans-serif; */
+          font-family: 'Poppines', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            background-color: white;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        .top-header {
+            background: linear-gradient(to right, #8b0000, #cc0000);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 15px;
+        }
+        
+        .listen-btn {
+            background: #cc0000;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        
+        .news-label {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        /* Content Styles */
+        .read-time {
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        
+        h1 {
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: #a00;
+        }
+        
+        h1 strong {
+            color: #a00;
+        }
+        
+        .author-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .sub-heading {
+            background: #f5f5f5;
+            padding: 12px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            border-left: 4px solid #a00;
+        }
+        
+        /* Video wrapper */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 0 auto 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        
+        /* Logos strip */
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logos img {
+            height: 30px;
+            object-fit: contain;
+        }
+        
+        /* Product Section */
+        .product-section {
+            margin: 25px 0;
+        }
+        
+        .product-heading {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #a00;
+            font-weight: bold;
+        }
+        
+        .product-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        
+        .product-box {
+            flex: 1;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .product-box:hover {
+            border-color: #a00;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-box h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .product-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #a00;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .buy-btn {
+            display: block;
+            background: #a00;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+        
+        /* Comments */
+        .comments-count {
+            font-size: 16px;
+            color: #666;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comment {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .comment-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #777;
+        }
+        
+        .comment-author {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .comment-time {
+            font-size: 12px;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        .comment-text {
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .comment-actions {
+            font-size: 13px;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+        
+        .comment-likes {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .comment-likes i {
+            margin-right: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 30px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .product-boxes {
+                flex-direction: column;
+            }
+            
+            .video-wrapper {
+                height: 300px;
+            }
+            
+            .main-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .logos {
+                gap: 10px;
+            }
+            
+            .logos img {
+                height: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 22px;
+            }
+            
+            .video-wrapper {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        URGENT: Scientists uncover a natural cure for Memory Loss that can be made at home
+    </div>
+    
+    <div class="main-header">
+        <div class="listen-btn">CLICK HERE TO LISTEN</div>
+        <div class="news-label">CAN 24:7 NEWS</div>
+    </div>
+    
+    <div class="read-time">4 MIN READ</div>
+    
+    <h1>URGENT: Scientists uncover a natural cure for Memory Loss that can be made at home</h1>
+    
+    <div class="author-date">
+        Over 15,000 Americans have already reversed Alzheimer's for less than $45<br>
+        <strong>By Dr. Sunjay Gupta</strong><br>
+        09/19/2025
+    </div>
+    
+    <div class="sub-heading">
+        ALZHEIMER'S REVERSED: NEW HOPE FROM BREAKTHROUGH THERAPY
+    </div>
+    
+    <div class="video-wrapper">
+        <video src="assets/video.mp4" autoplay muted playsinline controls></video>
+    </div>
+    
+    <div class="logos">
+        <img src="assets/images/logo-cbs.jpg" alt="CBS">
+        <img src="assets/images/logo-fox.jpg" alt="Fox News">
+        <img src="assets/images/logo-msnbc.jpg" alt="MSNBC">
+        <img src="assets/images/logo-abc.jpg" alt="ABC">
+        <img src="assets/images/logo-times.jpg" alt="New York Times">
+        <img src="assets/images/logo-cnn.jpg" alt="CNN">
+        <img src="assets/images/logo-nbc.jpg" alt="NBC">
+        <img src="assets/images/logo-fox-news.jpg" alt="Fox News">
+    </div>
+    
+    <div class="product-section">
+        <div class="product-heading">Choose Your Supply Package</div>
+        
+        <div class="product-boxes">
+            <div class="product-box">
+                <h3>1 Month Supply</h3>
+                <div class="product-image">
+                    <img src="assets/images/bottle 1.webp" alt="1 Month Supply">
+                </div>
+                <div class="product-price">$45</div>
+                <div class="product-description">Perfect for first-time users to test results</div>
+                <a href="#" class="buy-btn">Order Now</a>
+            </div>
+            
+            <div class="product-box">
+                <h3>3 Month Supply</h3>
+                <div class="product-image">
+                    <img src="assets/images/bottle2.webp" alt="3 Month Supply">
+                </div>
+                <div class="product-price">$39 per bottle</div>
+                <div class="product-description">Most popular - optimal results package</div>
+                <a href="#" class="buy-btn">Order Now</a>
+            </div>
+            
+            <div class="product-box">
+                <h3>6 Month Supply</h3>
+                <div class="product-image">
+                    <img src="assets/images/bottle3.webp" alt="6 Month Supply">
+                </div>
+                <div class="product-price">$33 per bottle</div>
+                <div class="product-description">Best value - complete transformation</div>
+                <a href="#" class="buy-btn">Order Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#" class="buy-btn" style="margin: 20px auto; max-width: 300px;">GET THE RECIPE NOW</a>
+    
+    <div class="comments-count">Showing 16 of 552 comments</div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">L</div>
+            <div>
+                <span class="comment-author">Linda Carter</span>
+                <span class="comment-time">13:3 m</span>
+            </div>
+        </div>
+        <p class="comment-text">So glad I stayed until the end. I'm incredibly happy!!! Thank you, Dr. Sunjay Gupta. As I got older, I started forgetting birthdays, where I put things… I thought to end up alone in a nursing home. But after trying this recipe, my memory came back like I was 20 again! God bless you!</p>
+        <div class="comment-actions">
+            <div class="comment-likes"><i class="fas fa-thumbs-up"></i> 13</div>
+            <div>Like - Reply</div>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">R</div>
+            <div>
+                <span class="comment-author">Rachel Simmons</span>
+                <span class="comment-time">9:11 m</span>
+            </div>
+        </div>
+        <p class="comment-text">I was skeptical at first, but after giving it a shot, I saw it actually works. I even remembered my bank password. Dr. Gupta, you're amazing!!</p>
+        <div class="comment-actions">
+            <div class="comment-likes"><i class="fas fa-thumbs-up"></i> 9</div>
+            <div>Like - Reply</div>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">T</div>
+            <div>
+                <span class="comment-author">Tom Jennings</span>
+                <span class="comment-time">18:13 m</span>
+            </div>
+        </div>
+        <p class="comment-text">My mom's had Alzheimer's for over five years. This honey trick helped her bounce back like I've never seen before. Thank you, God!</p>
+        <div class="comment-actions">
+            <div class="comment-likes"><i class="fas fa-thumbs-up"></i> 18</div>
+            <div>Like - Reply</div>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">M</div>
+            <div>
+                <span class="comment-author">Mark Phillips</span>
+                <span class="comment-time">3:16 h</span>
+            </div>
+        </div>
+        <p class="comment-text">Thank you so much, Dr. Gupta, for turning my life around in just a few weeks. It honestly feels like a miracle. I tear up just thinking about how well it worked.</p>
+        <div class="comment-actions">
+            <div class="comment-likes"><i class="fas fa-thumbs-up"></i> 3</div>
+            <div>Like - Reply</div>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">D</div>
+            <div>
+                <span class="comment-author">Debra Mitchell</span>
+                <span class="comment-time">5:26 m</span>
+            </div>
+        </div>
+        <p class="comment-text">I always thought this memory and Alzheimer's stuff was just hype, but I had to eat my words. If I had known about this earlier, I would've tried it years ago!</p>
+        <div class="comment-actions">
+            <div class="comment-likes"><i class="fas fa-thumbs-up"></i> 5</div>
+            <div>Like - Reply</div>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">S</div>
+            <div>
+                <span class="comment-author">Susan Blake</span>
+                <span class="comment-time">9:47 m</span>
+            </div>
+        </div>
+        <p class="comment-text">Thought it was a scam at first, but it seriously made my mind feel so much sharper! Unbelievable — thank you, Jesus!!!</p>
+        <div class="comment-actions">
+            <div class="comment-likes"><i class="fas fa-thumbs-up"></i> 9</div>
+            <div>Like - Reply</div>
+        </div>
+    </div>
+    
+    <div class="comment">
+        <div class="comment-header">
+            <div class="comment-avatar">G</div>
+            <div>
+                <span class="comment-author">Greg Thompson</span>
+                <span class="comment-time">10:1 h</span>
+            </div>
+        </div>
+        <p class="comment-text">I'll see this honey method everyone's talking about — and it's helping my mom a lot! I'm telling all my friends about it now.</p>
+        <div class="comment-actions">
+            <div class="comment-likes"><i class="fas fa-thumbs-up"></i> 10</div>
+            <div>Like - Reply</div>
+        </div>
+    </div>
+    
+    <p style
