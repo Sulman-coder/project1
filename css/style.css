@@ -141,7 +141,7 @@ a:hover { text-decoration: underline; }
 .comments-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0 8px;
     margin-top: 50px;
 }
 .comment {
@@ -165,7 +165,7 @@ a:hover { text-decoration: underline; }
 .comment-header {
     font-weight: 600;
     font-size: 14px;
-    color: #007BFF;
+    color: #254f7b;
     margin-bottom: 3px;
 }
 .comment-text {
